@@ -1,32 +1,39 @@
-<h2>Postagens</h2>
+<h2>Postagens</h2><a href="#areaDeEnvio" style="margin-left: 16px;">Fazer nova postagem</a>
 <hr>
-<table>
-  <tr>
-    <th>#Id</th>
-    <th>Título</th>
-    <th>Conteúdo</th>
-    <th>Tags</th>
-    <th>Data e hora</th>
-  </tr>
-  <tr *ngFor="let postagem of postagens">
-      <td>{{ postagem.id }}</td>
+<table class="table table-success">
+  <thead>
+    <tr>
+      <th scope="col">#Id</th>
+      <th scope="col">Título</th>
+      <th scope="col">Conteúdo</th>
+      <th scope="col">Tags</th>
+      <th scope="col">Data e hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let postagem of postagens">
+      <th scope="row">{{ postagem.id }}</th>
       <td>{{ postagem.titulo }}</td>
       <td>{{ postagem.conteudo }}</td>
       <td>{{ postagem.tags }}</td>
       <td>{{ postagem.dataHora }}</td>
-  </tr>
-
+    </tr>
+  </tbody>
 </table>
 
-<h2>Área de envio:</h2>
+<h2 id="areaDeEnvio">Área de envio:</h2>
 <hr>
 
 <form>
-  Título: <input type="text" name="titulo" id="titulo">
-  <br><br>
-  Conteúdo: <div class="form-group">
-    <label for=""></label>
-    <textarea class="form-control" name="" id="" rows="3"></textarea>
+  <div class="mb-3 container">
+    Título: <input type="text" name="titulo" id="titulo"><br><br>
+    Conteúdo: <div class="form-group">
+      <label for=""></label>
+      <textarea class="form-control" name="" id="conteudo" rows="3"></textarea>
+    </div>
+    <div class="container" style="padding: 16px;">
+      <button type="button" class="btn btn-primary">Enviar</button>
+    </div>
+    
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
