@@ -15,7 +15,17 @@
       <th scope="row">{{ postagem.id }}</th>
       <td>{{ postagem.titulo }}</td>
       <td>{{ postagem.conteudo }}</td>
-      <td>{{ postagem.tags }}</td>
+      <td>
+          <table>
+            <tr *ngFor="let tag of postagem.tags">
+              <td>
+                {{ tag.texto }}
+              </td>
+            </tr>
+
+          </table>
+          
+        </td>
       <td>{{ postagem.dataHora }}</td>
     </tr>
   </tbody>
