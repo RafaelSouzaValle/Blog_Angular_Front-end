@@ -1,5 +1,10 @@
 # Blog
 
+Projeto ainda não finalizado. Criado apenas com finalidade de exemplificar parte do conhecimento nas tecnologias implemetadas.
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
 ## Development server
